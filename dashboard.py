@@ -8,7 +8,8 @@ from datetime import datetime
 st.set_page_config(page_title="제주 상점 분석 플랫폼", layout="wide")
 
 # 데이터 로드 환경 설정
-DATA_PATH = r'C:\Users\JMC003\Desktop\icb6_20260103\project_1\jeju_store_cleaned.csv'
+# 배송 시 상대 경로를 사용하여 Streamlit Cloud 등 환경 호환성 확보
+DATA_PATH = 'jeju_store_cleaned.csv'
 
 @st.cache_data
 def load_data():
